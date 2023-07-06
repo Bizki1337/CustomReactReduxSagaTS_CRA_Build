@@ -1,26 +1,46 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
-  },
-  "include": [
-    "src"
-  ]
+	"compilerOptions": {
+		"baseUrl": "./src",
+		"outDir": "/dist",
+		"module": "esnext",
+		"target": "es6",
+		"downlevelIteration": true,
+		"lib": [
+			"es5",
+			"es6",
+			"dom",
+			"dom.iterable",
+			"es2018.promise"
+		],
+		"inlineSourceMap": true,
+		"allowJs": true,
+		"jsx": "react-jsx",
+		"moduleResolution": "node",
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"suppressImplicitAnyIndexErrors": true,
+		"resolveJsonModule": true,
+		"plugins": [
+			{
+				"name": "typescript-tslint-plugin",
+				"alwaysShowRuleFailuresAsWarnings": false,
+				"ignoreDefinitionFiles": false,
+				"configFile": "./tslint.json",
+				"suppressWhileTypeErrorsPresent": false,
+				"mockTypeScriptVersion": false
+			}
+		],
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"noFallthroughCasesInSwitch": true
+	},
+	"exclude": [
+		"node_modules"
+	],
+	"include": [
+		"src"
+	]
 }
